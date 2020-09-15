@@ -44,19 +44,19 @@ spring:
     gateway:
       routes:
         - id: order
-          uri: http://order:8080
+          uri: http://flower-order:8080
           predicates:
             - Path=/orders/**, /mypages/**
         - id: delivery
-          uri: http://delivery:8080
+          uri: http://flower-delivery:8080
           predicates:
             - Path=/deliveries/**, /orderDetails/**
         - id: payment
-          uri: http://payment:8080
+          uri: http://flower-payment:8080
           predicates:
             - Path=/payments/** 
         - id: sms
-          uri: http://sms:8080
+          uri: http://flower-sms:8080
           predicates:
             - Path= 
       globalcors:
